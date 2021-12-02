@@ -1,0 +1,132 @@
+// mobile styles for collection of articles on "our friends" page
+
+html body.blog div#page.site main#primary.site-main {
+  article.friends-archive {
+    background-color: $color_medium_beige;
+    width: 98%;
+    margin: auto;
+    border-radius: 2px;
+
+    h2.friends-archive {
+      padding: 0.35rem;
+    }
+
+    img.friends-archive {
+      display: block;
+      width: 98%;
+      margin: auto;
+      padding: 0.35rem;
+      border-radius: 2px;
+    }
+
+    p {
+      width: 98%;
+      font-weight: 500;
+      margin: auto;
+      padding: 0.35rem;
+    }
+
+    a {
+      color: $color_dark_green;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+}
+
+// END mobile styles for collection of articles on "our friends" page
+
+// tablet-width styles
+
+@media screen and (min-width: $size__breakpoint-mobile) {
+  html body.blog.custom-background div#page.site main#primary.site-main {
+    display: flex;
+    flex-wrap: wrap;
+
+    header {
+      display: block;
+      width: 100%;
+    }
+
+    article.friends-archive {
+      background-color: $color_medium_beige;
+      width: 45%;
+      margin: auto;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-radius: 2px;
+
+      h2.friends-archive {
+        padding: 0.5rem;
+      }
+
+      img.friends-archive {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 2px;
+        margin: auto;
+      }
+
+      p {
+        width: 100%;
+        font-weight: 500;
+        padding: 1rem;
+        margin: auto;
+      }
+
+      a {
+        color: $color_dark_green;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+// wide styles
+
+@media screen and (min-width: $size__breakpoint-tablet) {
+  html body.blog.custom-background div#page.site main#primary.site-main {
+    display: flex;
+    flex-wrap: wrap;
+
+    header {
+      display: block;
+      width: 100%;
+    }
+
+    article.friends-archive {
+      background-color: $color_medium_beige;
+      width: 32%;
+      margin: auto;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-radius: 2px;
+
+      h2.friends-archive {
+        padding: 0.5rem;
+      }
+
+      img.friends-archive {
+        width: 100%;
+        padding: 0;
+        margin: auto;
+      }
+
+      p {
+        width: 100%;
+        font-weight: 500;
+        padding: 1rem;
+        margin: auto;
+      }
+
+      a {
+        color: $color_dark_green;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+// END wide styles

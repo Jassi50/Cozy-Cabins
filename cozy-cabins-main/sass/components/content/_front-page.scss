@@ -1,0 +1,133 @@
+// mobile styles for collection of articles on the home page
+
+html body div#page.site main#primary.site-main {
+  article.front-archive {
+    background-color: $color_medium_beige;
+    width: 98%;
+    margin: auto;
+    border-radius: 2px;
+
+    h2.front-archive {
+      padding: 0.35rem;
+    }
+
+    img.front-archive {
+      display: block;
+      width: 98%;
+      margin: auto;
+      padding: 0.35rem;
+      border-radius: 2px;
+    }
+
+    p {
+      width: 100%;
+      font-weight: 500;
+      padding: 1rem;
+      margin: auto;
+    }
+
+    a {
+      color: $color_dark_green;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+}
+
+// END mobile styles for collection of articles on front page
+
+// tablet-width styles
+
+@media screen and (min-width: $size__breakpoint-mobile) {
+  html body div#page.site main#primary.site-main {
+    display: flex;
+    flex-wrap: wrap;
+
+    header {
+      display: block;
+      width: 100%;
+    }
+
+    article.front-archive {
+      background-color: $color_medium_beige;
+      width: 75%;
+      margin: auto;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 2px;
+
+      h2.front-archive {
+        padding: 0.5rem;
+      }
+
+      img.front-archive {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 2px;
+        margin: auto;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        width: 100%;
+        font-weight: 500;
+        padding: 1rem;
+        margin: auto;
+      }
+
+      a {
+        color: $color_dark_green;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+// wide styles
+
+@media screen and (min-width: $size__breakpoint-tablet) {
+  html body div#page.site main#primary.site-main {
+    display: flex;
+    flex-wrap: wrap;
+
+    header {
+      display: block;
+      width: 100%;
+    }
+
+    article.front-archive {
+      background-color: $color_medium_beige;
+      width: 32%;
+      margin: auto;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-radius: 2px;
+
+      h2.front-archive {
+        padding: 0.5rem;
+      }
+
+      img.front-archive {
+        width: 100%;
+        padding: 0;
+        margin: auto;
+      }
+
+      p.front-archive {
+        width: 100%;
+        font-weight: 500;
+        padding: 1rem;
+        margin: auto;
+      }
+
+      a {
+        color: $color_dark_green;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+// END wide styles

@@ -1,0 +1,33 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+$size__site-maxwidth: 60em;
+$size__site-minwidth: 20em;
+
+// width break at 600 px
+$size__breakpoint-mobile: 37.5em;
+
+// width break at 768 px
+$size__breakpoint-tablet: 48em;
+
+// width break at 960 px
+$size__breakpoint-retina: 60em;
+
+//To get Footer to bottom
+
+#page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	// margin: 0 0 5rem 0;
+	padding: 0 0 5rem 0;
+}
+#page #primary {
+	flex-grow: 5;
+}
+.page {
+    margin: 0;
+}
+
+.site-main {
+    max-width: 60em;
+}

@@ -1,0 +1,18 @@
+@media screen and (min-width: $size__breakpoint-mobile) {
+    #primary .products.columns-4 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1rem;
+        // color: red;
+    }  
+}
+
+#primary .products.columns-4 {
+    margin: 0 auto;
+    text-align: center;
+    img {
+        margin: 0 auto;
+    }
+}
+
