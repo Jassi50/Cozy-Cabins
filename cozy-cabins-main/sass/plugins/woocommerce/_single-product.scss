@@ -1,0 +1,415 @@
+.woocommerce-notices-wrapper {
+  max-width: 100vw;
+  padding-bottom: 1rem;
+
+  .woocommerce-message {
+    padding: 0.5rem;
+    a {
+      color: white;
+    }
+  }
+  ul.woocommerce-error {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 0.5rem;
+    }
+  }
+}
+.single-product:not(.postid-49) {
+
+  .site-main {
+    justify-content: center;
+  }
+  div.product{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    @media (min-width: $size__breakpoint-retina) {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+    .woocommerce-product-gallery {
+      position: relative;
+      // float: left;
+      width: 100%;
+      max-width: 400px;
+      .woocommerce-product-gallery__trigger {
+        position: absolute;
+        top: 2em;
+        right: 1em;
+        display: block;
+        z-index: 99;
+      }
+
+      .flex-viewport {
+        margin-bottom: 1em;
+        text-align: center;
+        @media (min-width: $size__breakpoint-retina) {
+          img {
+            max-width: 650px;
+          }
+        }
+      }
+
+      .flex-control-thumbs {
+        max-width: 300px;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        li {
+          // display: none;
+          list-style: none;
+          cursor: pointer;
+          float: left;
+
+          img {
+            opacity: 0.5;
+            object-fit: cover;
+            &.flex-active {
+              opacity: 1;
+            }
+          }
+
+          &:hover {
+            img {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      @for $i from 2 through 5 {
+        &.woocommerce-product-gallery--columns-#{$i} {
+          .flex-control-thumbs {
+            li {
+              @include column-width($i);
+
+              &:nth-child(#{$i}n) {
+                margin-right: 0;
+              }
+
+              &:nth-child(#{$i}n + 1) {
+                clear: both;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  //review styles
+
+  .woocommerce-Reviews {
+    div#comments {
+      margin: auto;
+      border: 1px solid $color_warm_brown;
+      border-radius: 2px;
+      background-color: $color_medium_beige;
+      padding: 1rem;
+      max-width: 500px;
+
+      .comment-title {
+        margin: 0;
+        text-align: center;
+      }
+      ol.commentlist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        p.meta {
+          position: absolute;
+          margin: 0;
+          width: 160px;
+          left: 75px;
+          top: 0;
+        }
+        .description p {
+          margin-bottom: 0;
+          font-size: 1.25rem;
+        }
+      }
+      .woocommerce-review__author {
+        font-size: 0.8rem;
+      }
+      .avatar.photo {
+        border-radius: 2px;
+        width: 50px;
+      }
+    }
+    h2.woocommerce-Reviews-title {
+      margin-left: 1.5rem;
+    }
+    #review_form {
+      padding-top: 1rem;
+
+      #reply-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    input#author,
+    input#email {
+      width: 100%;
+    }
+  }
+  .products.columns-3 {
+    text-align: center;
+    img, #sp-wqv-view-button {
+      margin:auto;
+    }
+  }
+  .stock {
+    &:empty::before {
+      display: none;
+    }
+  
+    &.in-stock {
+      color: $woocommerce__color-success;
+    }
+  
+    &.out-of-stock {
+      color: $woocommerce__color-error;
+    }
+  }
+  
+  //product styles
+  
+  //calendar styles
+  
+  .cart {
+    text-align: center;
+    //schedule button
+    @media (min-width: $size__breakpoint-retina) {
+      grid-area: 1 / 2 / 4 / 3;
+  
+      #wc-bookings-booking-form {
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .form-field.form-field-wide.wc_bookings_field_persons {
+          order: 2;
+          margin-bottom: 0;
+        }
+      }
+
+      .wc-bookings-booking-form-button.single_add_to_cart_button {
+        max-width: 150px;
+      }
+    }
+
+    .wc-bookings-booking-cost {
+      width: 100%;
+    }
+    .picker.hasDatepicker {
+      background: rgb(245, 245, 245);
+      border-radius: 5px;
+    }
+
+    .wc_bookings_field_persons {
+      font-size: 1.25rem;
+      text-align: left;
+      margin: 1rem;
+    }
+  
+    .wc-bookings-booking-form-button.single_add_to_cart_button {
+      width: 90%;
+  
+      background: $color_warm_green;
+      margin-top: 1rem;
+      padding: 1.5rem;
+      font-family: $font__main;
+      font-weight: 500;
+      color: #fff;
+    }
+  
+    // date picker
+    .wc-bookings-date-picker.wc-bookings-date-picker-accommodation-booking {
+      padding: 0;
+      border: none;
+      margin: auto;
+    }
+    .wc-bookings-date-picker {
+      button.wc-bookings-booking-form-button {
+        right: 0;
+      }
+  
+      position: relative;
+      width: 90%;
+      max-width: 700px;
+      .ui-datepicker {
+        .ui-datepicker-header {
+          position: relative;
+  
+          padding: 1rem;
+          .ui-datepicker-title {
+            font-size: 1rem;
+            font-weight: 700;
+          }
+        }
+        .ui-datepicker-next {
+          font-size: 0.7rem;
+          position: absolute;
+          right: 1rem;
+          margin-top: 25px;
+        }
+        .ui-datepicker-prev {
+          font-size: 0.7rem;
+          position: absolute;
+          left: 1rem;
+          margin-top: 25px;
+        }
+  
+        table {
+          margin: 0;
+          padding: 1rem 0;
+          border-collapse: collapse;
+  
+          thead {
+            th {
+              padding: 0.75rem;
+              color: black;
+            }
+          }
+          tbody {
+            td {
+              text-align: center;
+              font-weight: 500;
+              padding: 0.8rem;
+              a {
+                color: black;
+              }
+              @media (min-width: $size__breakpoint-mobile) {
+                .ui-state-default{
+                  font-size: 1.1rem;
+                  padding: 0.9rem;
+                }
+              }
+            }
+            .ui-datepicker-unselectable.ui-state-disabled.bookable {
+              background: #a7a39c23;
+              .ui-state-default{
+                color: rgba(167, 167, 167, 0.548);
+              }
+            }
+            td.bookable {
+              background: rgb(245, 245, 245);
+            }
+            td.fully_booked {
+              background: rgb(167, 25, 25);
+              .ui-state-default, .ui-state-active{
+                color: white;
+              }
+            }
+            td.bookable-range {
+              background: rgb(11, 148, 11);
+              .ui-state-default, .ui-state-active{
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // summary styles
+  
+  .woocommerce-product-details__short-description {
+    padding: 0 0.125rem;
+  }
+  
+  .summary.entry-summary {
+    grid-area: 2 / 1/ 4 / 2;
+    .product_meta {
+      display: none;
+    }
+    position: relative;
+    p.price {
+      margin-bottom: 0;
+      .woocommerce-Price-amount.amount {
+        font-weight: 700;
+        font-size: 1.125rem;
+      }
+      @media (min-width: $size__breakpoint-mobile) {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 2rem 0 0 0;
+        font-size: 1.25rem;
+      }
+    }
+  }
+  
+  table.woocommerce-product-attributes.shop_attributes {
+    @media (min-width: $size__breakpoint-retina){
+      grid-area: auto/1/auto/2;
+    }
+  
+    border-collapse: collapse;
+    tr:nth-of-type(even) {
+      background-color: $color_medium_beige;
+    }
+    th {
+      width: 200px;
+    }
+    td {
+      text-align: center;
+      padding: 1rem 0.5rem;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  
+  //check-in/out styles
+  .check-time {
+    @media (min-width: $size__breakpoint-retina){
+      grid-area: 4 / 2 / 6 / 3;
+    }
+    .check-time-list {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+  
+      li {
+        padding: 0.5rem 0;
+      }
+    }
+  }
+}
+
+  //gift card styles
+div.virtual.product-type-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  h1 {
+    margin: 0;
+  }
+  h2, .posted_in, .check-time, #reviews, .onsale {
+    display: none;
+  }
+
+  .summary .entry-summary {
+    order: 2;
+  }
+
+  .cart {
+    order: 3;
+    .quantity {
+      padding-bottom: 1rem;
+    }
+    padding-bottom: 5rem;
+  } 
+}

@@ -1,0 +1,64 @@
+.sticky {
+  display: block;
+}
+
+// master max-sizing and centering for whole site.
+
+div#page.site {
+  // max-width: $size__site-maxwidth;
+  // margin: auto;
+}
+
+// mobile master margins for site pages and posts
+
+.post,
+.page {
+  margin: 0 0.5em;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 0.5em 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+// END mobile master margins for site pages and posts
+
+// begin wider page and post width for tablet - small desktop
+
+@media screen and (min-width: $size__breakpoint-mobile) {
+  .post,
+  .page {
+    margin: 0 0.75em;
+  }
+
+  .page-content,
+  .entry-content,
+  .entry-summary {
+    margin: 0.75em 0 0;
+  }
+}
+
+@media screen and (min-width: $size__breakpoint-tablet) {
+  .post,
+  .page {
+    margin: 0 1.5em;
+  }
+
+  .page-content,
+  .entry-content,
+  .entry-summary {
+    margin: 1.5em 0 0;
+  }
+}
+
+
