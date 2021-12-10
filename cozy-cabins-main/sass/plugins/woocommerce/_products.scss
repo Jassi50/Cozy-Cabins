@@ -39,12 +39,24 @@ ul.products {
   li.our-cabins-arc h2 {
     margin: 1rem 0 0 0;
   }
+
   li.our-cabins-arc:nth-of-type(1) h2 {
     margin: 0;
+	position: relative;
+    top: 2rem;
   }
-  li.our-cabins-arc:nth-of-type(1).woocommerce-loopproduct-link.woocommerce-loop-product__link {
-    position: relative;
-    top: 5rem;
+ 
+  li.our-cabins-arc:nth-of-type(1) .onsale {
+	position: relative;
+	top: 2rem;
+  }
+  li.our-cabins-arc:nth-of-type(1) img {
+	  position: relative;
+	  top: 1rem;
+  }
+  li.our-cabins-arc {
+	  position: relative;
+	  bottom: 1rem;
   }
 }
 
@@ -145,9 +157,4 @@ li.our-cabins-arc {
     padding: 0.3rem;
     width: 40%;
   }
-}
-
-html body.archive div#page.site main#primary.site-main {
-  flex-direction: column;
-  width: 100%;
 }
